@@ -1,0 +1,222 @@
+body{
+    background-color: black;
+    font-size: 2.5vh;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+*{
+    box-sizing: border-box;
+    transition: all 0.5s ease;
+}
+.app{
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+main{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end
+}
+p{
+    margin: 0;
+    line-height: 1.5
+}
+.sm{
+    font-size: 55%
+}
+.md{
+    font-size: 85%;
+}
+.bold{
+    font-weight: 800
+}
+header{
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 10%;
+    justify-content: space-between;
+    align-items: center
+
+}
+header > img{
+    max-height: 25%;
+}
+.bar{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.baritem{
+    color: white;
+    display: flex;
+    height: 20px;
+    padding-right: 20px;
+    align-items: center;
+}
+.baritem img{
+    height: 80%;
+    width: auto;
+    margin-right: 10px;
+}
+.order{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start
+}
+.gameInOrder{
+    display: flex;
+    background: rgb(60, 214, 124);
+    position: relative;
+    width: 380px;
+    height: 210px;
+    padding: 20px;
+    margin: 15px;
+}
+.controller{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-height: 50%
+}
+.cover{
+    max-height: 100%;
+    width: auto;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)
+}
+.gameDetails{
+    padding-left: 15px;
+    position: relative;
+}
+.gameDetails.inOrder *{
+    margin-top: 10px
+}
+.gameDetails.inOrder > button{
+    position: absolute;
+    bottom: 0;
+}
+.price {
+    display: flex;
+    height: 20px;
+}
+.price > img{
+    height: 10px;
+    margin-right: 10px;
+    width: auto;
+}
+button{
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 100px;
+    opacity: 1;
+}
+button.sm{
+    padding: 8px 16px;
+    font-size: 50%;
+}
+button.lg{
+    width: 100%;
+    padding: 12px 0
+}
+span.disabled{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(60, 214, 124, 0.5);
+    visibility: hidden;
+    opacity: 0;
+}
+span.disabled.true{
+    visibility: visible;
+    opacity: 1;
+}
+.basketContainer{
+    height: 100%;
+    position: relative;
+    justify-self: flex-end;
+}
+.basket{
+    background-color: rgba(60, 214, 124, 1);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+}
+.basketContainer.button{
+    width: 100%;
+    height: 0%;
+    position: absolute;
+    overflow: hidden;
+}
+.basketContainer.side{
+    width: 40%
+}
+.basketContainer.full{
+    width: 100%
+}
+.basketContent{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap
+}
+.basketContent *{
+    width: 100%;
+}
+.center{
+    text-align: center;
+    align-self: center
+}
+.gameInBasket{
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+    height: 70px;
+    align-items: center;
+}
+.gameInBasket > img{
+    height: 100%;
+    width: auto;
+}
+.gameDetails.inBasket{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+.bin{
+    max-height: 40%;
+    width: auto;
+    cursor: pointer;
+}
+.overallPrice{
+    display: flex;
+    justify-content: space-around
+}
+.disabled{
+    cursor: auto;
+    opacity: 0.6;
+}
+.openBasketMobile{
+    background-color: rgba(60, 214, 124, 1);
+    color: white;
+    padding: 12px;
+}
